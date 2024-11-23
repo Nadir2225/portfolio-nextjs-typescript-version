@@ -1,15 +1,22 @@
 "use client";
 
 import { useRef } from "react";
-import Header from "./components/header";
-import MyHome from "./components/home";
 import About from "./components/about";
 import Skills from "./components/skills";
 import Projects from "./components/projects";
 import Resume from "./components/resume";
 import Contact from "./components/contact";
+import dynamic from "next/dynamic";
 
 export default function Home() {
+
+  const MyHome = dynamic(() => import('./components/home'), {
+    ssr: false,
+  });
+
+  const Header = dynamic(() => import('./components/header'), {
+    ssr: false,
+  });
 
   const pages = {
     home: useRef(null),
@@ -21,12 +28,13 @@ export default function Home() {
   }
 
   const scrollDown = (ref: React.RefObject<HTMLElement>) => {
-    window.scrollTo({
-      // top: ref.current.offsetTop,
-      top: ref.current != null ? ref.current.offsetTop - 75 : 0,
-      behavior: "smooth",
-    });
-  }
+    if (typeof window !== "undefined" && ref.current) {
+      window.scrollTo({
+        top: ref.current.offsetTop - 75,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <>
       <Header pages={pages} scrollDown={scrollDown} />

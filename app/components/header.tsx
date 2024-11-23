@@ -19,10 +19,12 @@ function Header(props: headerProps) {
   const [navColour, updateNavbar] = useState(false);
 
   function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
+    if (typeof window !== "undefined") {
+      if (window.scrollY >= 20) {
+        updateNavbar(true);
+      } else {
+        updateNavbar(false);
+      }
     }
   }
 

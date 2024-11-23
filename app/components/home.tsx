@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import { Particlesbg } from './particlesbg'
 import Retyped from './retyped'
