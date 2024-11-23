@@ -9,7 +9,7 @@ const MyHome = (props: homeProps) => {
           <Particlesbg />
           <div className='home-content'>
               <div className='home-title'>
-                  Hi, I'm <p className='ma-name'>Nadir El Ouadghiri</p>
+                  Hi, I&apos;m <p className='ma-name'>Nadir El Ouadghiri</p>
               </div>
               <div>Software developer</div>
               <Retyped style={{marginBottom: '25px', lineHeight: '1rem'}} />
