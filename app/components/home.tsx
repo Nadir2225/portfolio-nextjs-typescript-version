@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Particlesbg } from './particlesbg'
 import Retyped from './retyped'
 import { homeProps } from '@/app/types'
