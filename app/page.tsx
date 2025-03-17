@@ -7,13 +7,13 @@ import Projects from "./components/projects";
 import Resume from "./components/resume";
 import Contact from "./components/contact";
 import dynamic from "next/dynamic";
-import Loading from "./components/loading";
+// import Loading from "./components/loading";
 
 export default function Home() {
 
   const MyHome = dynamic(() => import('./components/home'), {
     ssr: false,
-    loading: () => <Loading />
+    // loading: () => <Loading />
   });
 
   const Header = dynamic(() => import('./components/header'), {
