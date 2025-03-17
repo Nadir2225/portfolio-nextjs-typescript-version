@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import Loading from '../components/loading';
+// import Loading from '../components/loading';
 
 interface LoadingContextType {
   isLoading: boolean;
