@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-// import Loading from '../components/loading';
+import Loading from '../components/loading';
 
 interface LoadingContextType {
   isLoading: boolean;
@@ -27,8 +27,8 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
   
   return (
     <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
-      {/* {isLoading ? <Loading /> : ( */}
-      {isLoading ? <div>loading</div> : (
+      {isLoading ? <Loading /> : (
+    //   {isLoading ? <div>loading</div> : (
         children
       )}
     </LoadingContext.Provider>
