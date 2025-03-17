@@ -27,7 +27,7 @@ function Header(props: headerProps) {
       }
     }
   }
-
+// changes are made
   window.addEventListener("scroll", scrollHandler);
 
   return (

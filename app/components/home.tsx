@@ -6,6 +6,7 @@ import Retyped from './retyped'
 import { homeProps } from '@/app/types'
 
 const MyHome = (props: homeProps) => {
+    // changes are made
 
     return (
       <div className='home'>

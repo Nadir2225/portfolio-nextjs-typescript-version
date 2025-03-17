@@ -3,6 +3,7 @@ import animationData from '../lottie/loading.json'
 import Lottie from 'lottie-react'
 
 const Loading = () => {
+  // changes are made
   return (
     <div 
     style={{
