@@ -1,11 +1,12 @@
 "use client";
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Particlesbg } from './particlesbg'
 import Retyped from './retyped'
 import { homeProps } from '@/app/types'
 
 const MyHome = (props: homeProps) => {
+
     return (
       <div className='home'>
           <Particlesbg />

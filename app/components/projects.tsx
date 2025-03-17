@@ -35,6 +35,13 @@ const Projects = () => {
         <Title first="Android" second="Applications" />
         <div className='projects-container'>
           <Project2
+            img='/aquamate.png'
+            name="AquaMate"
+            desc='A native Android app for tracking water intake and hydration goals. Technologies: Kotlin, Jetpack Compose, RoomDB (for local storage).'
+            github="https://github.com/Nadir2225/food-recipes"
+            file=""
+          />
+          <Project2
             img='/food.jpg'
             name="food Recipes app"
             desc='a native android app for food recipes.technologies: kotlin, jetpack compose, roomDB(for local db), exoplayer(to play videos), firebase tools: (authentification, firestore, cloud storage).'
