@@ -1,7 +1,8 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import Loading from '../components/loading';
+// import Loading from '../components/loading';
+import dynamic from 'next/dynamic';
 
 interface LoadingContextType {
   isLoading: boolean;
@@ -24,6 +25,10 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
     const timer = setTimeout(() => setIsLoading(false), 100);
     return () => clearTimeout(timer);
   }, []);
+
+  const Loading = dynamic(() => import('../components/loading'), {
+      ssr: false,
+    });
   
   return (
     <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
