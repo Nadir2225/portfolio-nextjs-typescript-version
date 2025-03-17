@@ -1,4 +1,3 @@
-// LoadingContext.tsx
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
@@ -22,7 +21,6 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   
   useEffect(() => {
-    // When this effect runs, hydration has completed
     const timer = setTimeout(() => setIsLoading(false), 100);
     return () => clearTimeout(timer);
   }, []);

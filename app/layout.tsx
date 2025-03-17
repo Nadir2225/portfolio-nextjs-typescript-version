@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import 'react-toastify/dist/ReactToastify.css';
 import "bootstrap/dist/css/bootstrap.min.css"
-import { LoadingProvider } from "./context/loadingContext";
+import { LoadingProvider } from "./context/loadingcontext";
 
 
 export const metadata: Metadata = {
