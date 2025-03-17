@@ -27,7 +27,8 @@ export function LoadingProvider({ children }: LoadingProviderProps) {
   
   return (
     <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
-      {isLoading ? <Loading /> : (
+      {/* {isLoading ? <Loading /> : ( */}
+      {isLoading ? <div>loading</div> : (
         children
       )}
     </LoadingContext.Provider>
